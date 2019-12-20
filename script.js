@@ -1,13 +1,36 @@
-// different data types have arrays
+//generate random password
 
+function generate(){
+
+    //set password length/complexity
+    let complexity = document.getElementById("chosenlength").nodeValue;
+
+    let values = //input characters
+
+    let password="";
+
+    //create for loop to choose password characters
+
+    for(var i=0; i <=complexity; i++) {
+        password = password + values.charAt(Math.floor(Math.random()* Math.floor(values.length-1)));
+    }
+
+    //add password to textbox/display area
+    document.getElementById("pword").value = password;
+}
+
+// different data types have arrays 
 
 // Special characters array loop //
+
 var Special = ['~','!','@','#','$','%','^','&','*'];
 var arrayLength = Special.length;
 for (var i=0; i < arrayLength; i++) {
     console.log(Special[1]);
 }
+
 // Numeric characters array loop //
+
 var Numeric = ['0','1','2','3','4','5','6','7','8','9'];
 var arrayLength = Numeric.length;
 for (var i=0; i < arrayLength; i++) {

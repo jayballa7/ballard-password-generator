@@ -1,4 +1,8 @@
-body {
-    border: 5px solid #25013d;
-    padding: 2%;
+body, wrapper {
+    min-height:100vh;
+    height:500px;
+}
+
+footer {
+    text-align:center;
 }

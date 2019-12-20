@@ -9,32 +9,34 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-  <div class="container">
+    <wrapper class="d-flex flex-column">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">Password Generator</a>
+    </nav>
+    <main class="container-fluid py-3 flex-fill">
+<div class="container">
     <header>
-      <h1>Password Generator</h1>
+      <h1>Generate a Password</h1>
     </header>
-    <h2>Generate a Password</h2>
 
     <div class="row">
       <div class="col-xl-6">
   <!--Password Display Box-->
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
-            <h1 class="display-4">Your Password</h1>
+            <h1 class="display-4" id="pword">Your Password</h1>
             <p class="lead"></p>
           </div>
         </div>
-    <button id="generate">Generate Password</button>
-    <button id="copy">
-      Copy to Clipboard
-    </button>
-  
+    <button onclick="generate()">Generate Password</button>
+    <button onclick="">Copy to Clipboard</button>
 </div>
+
 <!--Length Dropdown Menu-->
 <div class="col-md-6">
 <label>
     <div class="form-group">
-        <select class="custom-select" required>
+        <select class="custom-select" required id="chosenlength">
           <option value="">Length (8-128 characters)</option>
           <option value="1">8</option>
           <option value="2">9</option>
@@ -54,35 +56,46 @@
           <option value="16">23</option>
         </select>
       </div>
+
 <!--Special Characters-->
 <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Special characters (e.g. @#$%*&)</label>
-  </div>
+</div>
 <!--Numeric Characters-->
 <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck2">
     <label class="form-check-label" for="exampleCheck1">Numeric characters (e.g. 1234567890)</label>
   </div>
 <!--Lowercase Characters-->
 <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck3">
     <label class="form-check-label" for="exampleCheck1">Lowercase characters (e.g. abcdefg)</label>
   </div>
 <!--Upperchase Characters-->
 <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <input type="checkbox" class="form-check-input" id="exampleCheck4">
     <label class="form-check-label" for="exampleCheck1">Uppercase characters (e.g. ABCDEFG)</label>
   </div>
 </div>
 <!--Input checkboxes end-->  
   </label>
-  </div>
-    </div>
+  </div> 
+
+</div>
+</main>
+
+<!--sticky footer-->
+
+ <footer class="container-fluid w-100 bg-dark text-light py-3">Copyright &copy; 2019</footer>
+
+</wrapper>
 
 <script type = "text/javascript" src = "script.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+
+</body>
+
 </html>
