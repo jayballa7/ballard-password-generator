@@ -24,38 +24,21 @@
   <!--Password Display Box-->
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
-            <h1 class="display-4" id="pword">Your Password</h1>
-            <p class="lead"></p>
+            <h1 class="display-4">Your Password</h1>
+            <p id="lead"></p>
           </div>
         </div>
-    <button onclick="generate()">Generate Password</button>
-    <button onclick="">Copy to Clipboard</button>
+    <button id="gen1">Generate Password</button>
+    <button>Copy to Clipboard</button>
 </div>
 
-<!--Length Dropdown Menu-->
+<!--Length Menu-->
 <div class="col-md-6">
 <label>
     <div class="form-group">
-        <select class="custom-select" required id="chosenlength">
-          <option value="">Length (8-128 characters)</option>
-          <option value="1">8</option>
-          <option value="2">9</option>
-          <option value="3">10</option>
-          <option value="4">11</option>
-          <option value="5">12</option>
-          <option value="6">13</option>
-          <option value="7">14</option>
-          <option value="8">15</option>
-          <option value="9">16</option>
-          <option value="10">17</option>
-          <option value="11">18</option>
-          <option value="12">19</option>
-          <option value="13">20</option>
-          <option value="14">21</option>
-          <option value="15">22</option>
-          <option value="16">23</option>
-        </select>
-      </div>
+      <label>Password Length (8 to 128 characters)</label><br>
+      <input id="passwordlength" type="number" min="8" max="128" inputmode="">
+    </div>
 
 <!--Special Characters-->
 <div class="form-check">

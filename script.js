@@ -1,50 +1,44 @@
-//generate random password
+var cbx1 = document.getElementById("exampleCheck1");
+var cbx2 = document.getElementById("exampleCheck2");
+var cbx3 = document.getElementById("exampleCheck3");
+var cbx4 = document.getElementById("exampleCheck4");
+var special = "~!@#$%^&*";
+var numeric = "0123456789";
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var passStr = "";
+var useChar=[];
+var strUseChar="";
+var passLen = 8;
+var passArr = [];
 
-function generate(){
-
-    //set password length/complexity
-    let complexity = document.getElementById("chosenlength").nodeValue;
-
-    let values = //input characters
-
-    let password="";
-
-    //create for loop to choose password characters
-
-    for(var i=0; i <=complexity; i++) {
-        password = password + values.charAt(Math.floor(Math.random()* Math.floor(values.length-1)));
+function checkBox(){
+    if(cbx1.checked === true){
+        strUseChar += special;
     }
+    if(cbx2.checked === true){
+      strUseChar += numeric;
+    }
+    if(cbx3.checked === true){
+      strUseChar += lowercase;
+    }
+    if(cbx4.checked === true){
+      strUseChar += uppercase
+    }
+   useChar = strUseChar.split("");
+};
 
-    //add password to textbox/display area
-    document.getElementById("pword").value = password;
-}
+document.getElementById('gen1').onclick = function () {
+  useChar = [];
+  strUseChar = "";
+  passArr = [];
+  checkBox();
+  console.log(useChar.length);
+  passLen = document.getElementById("passwordlength").value;
+  for(var i = 0; i < passLen; i++){
+      passArr.push(useChar[Math.floor(Math.random() * useChar.length)]);
+  }
+  document.getElementById('lead').innerHTML = passArr.join('');
+};
 
-// different data types have arrays 
 
-// Special characters array loop //
-
-var Special = ['~','!','@','#','$','%','^','&','*'];
-var arrayLength = Special.length;
-for (var i=0; i < arrayLength; i++) {
-    console.log(Special[1]);
-}
-
-// Numeric characters array loop //
-
-var Numeric = ['0','1','2','3','4','5','6','7','8','9'];
-var arrayLength = Numeric.length;
-for (var i=0; i < arrayLength; i++) {
-    console.log(Numeric[i]);
-}
-// Lowercase characters array loop // 
-var Lowercase = ['a', 'b', 'c', 'd', 'e','f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var arrayLength = Lowercase.length;
-for (var i=0; i < arrayLength; i++) {
-    console.log(Lowercase[i]);
-}
-// Uppercase characters array loop //
-var Uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-var arrayLength = Uppercase.length;
-for (var i=0; i < arrayLength; i++) {
-    console.log(Uppercase[i]);
-}

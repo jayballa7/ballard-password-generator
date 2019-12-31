@@ -3,6 +3,9 @@ body, wrapper {
     height:500px;
 }
 
+p {
+    word-wrap: break-word;
+}
 footer {
     text-align:center;
 }
