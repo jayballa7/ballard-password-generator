@@ -12,6 +12,8 @@ var strUseChar="";
 var passLen = 8;
 var passArr = [];
 
+//Taking input from user for the characters they would like to use//
+
 function checkBox(){
     if(cbx1.checked === true){
         strUseChar += special;
@@ -28,6 +30,8 @@ function checkBox(){
    useChar = strUseChar.split("");
 };
 
+//Function executes when generate password button is clicked and displays to text box//
+
 document.getElementById('gen1').onclick = function () {
   useChar = [];
   strUseChar = "";
@@ -40,5 +44,3 @@ document.getElementById('gen1').onclick = function () {
   }
   document.getElementById('lead').innerHTML = passArr.join('');
 };
-
-
